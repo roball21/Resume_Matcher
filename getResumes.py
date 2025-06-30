@@ -3,6 +3,7 @@ import json
 import time  
 
 
+
 class JobScraper:
 
     def __init__(self, api_key, query, location, pages=5, delay=1.5):
@@ -11,7 +12,7 @@ class JobScraper:
         self.location = location
         self.pages = pages
         self.delay = delay
-        self.base_url = "https//jsearch.p.rapidapi.com/search"
+        self.base_url = "https://jsearch.p.rapidapi.com/search"
         self.headers = {
             "X-RapidAPI-Key": self.api_key,
             "X-RapidAPI-Host": "jsearch.p.rapidapi.com"
