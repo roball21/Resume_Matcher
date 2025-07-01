@@ -1,1 +1,8 @@
 .env
+
+*.npy
+
+.DS_Store
+
+__pycache__/
+*.pyc
