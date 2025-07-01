@@ -34,10 +34,10 @@
 
 ## Requirements
 
-> Python 3.8+
-> OpenAI API key (set via .env)
-> RapidAPI
-> PyPDF2, openai, requests, numpy, python-dotenv, scikit-learn
+ - Python 3.8+
+ - OpenAI API key (set via .env)
+ - RapidAPI
+ - PyPDF2, openai, requests, numpy, python-dotenv, scikit-learn
 
 ---
 
