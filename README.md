@@ -1,7 +1,5 @@
 # Resume Matcher 
 
----
-
 ## Features
 
  - Extracts skills from your resume in .pdf format
