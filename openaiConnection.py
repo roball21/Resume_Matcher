@@ -20,8 +20,13 @@ class EmbeddingAndComparison:
         self.results = []
 
     def embed_text(self, text):
+        cleaned_text_list = [str(t) for t in text if isinstance(t, str) and t.strip()]
+
+        if not cleaned_text_list:
+            raise ValueError("No valid input string to embed.")
+
         response = openai.embeddings.create(
-            input=text, 
+            input=cleaned_text_list, 
             model=self.model
         )
         return [item.embedding for item in response.data]
@@ -62,7 +67,7 @@ class EmbeddingAndComparison:
         ranked = sorted(zip(job_data, scores), key=lambda x: x[1], reverse=True) 
 
         print("\n Top job matches:\n")
-        for job, score in ranked:
-            print(f"- {job['title']}: {score:.4f}")
+        for job, score in ranked[:10]:
+            print(f"- {job['job_title']}: {score:.4f}")
 
         return ranked
